@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EazyCash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>EazyCash</h1>
+            <button id="connect-wallet" onclick="init()">Connect Wallet</button>
+        </header>
+        
+        <section id="info">
+            <p id="network-info">Network: <span id="network-name">None</span></p>
+            <p id="wallet-info">Wallet: <span id="wallet-address">Not connected</span></p>
+        </section>
+        
+        <section id="tickets">
+            <h2>Buy Tickets</h2>
+            <div class="ticket-option" data-category="1">
+                <h3>Silver Ticket - $1.2</h3>
+                <p>Chance to win: $10 - 30% of prize pool</p>
+                <button class="buy-ticket" data-category="1">Buy Ticket</button>
+            </div>
+            <div class="ticket-option" data-category="2">
+                <h3>Gold Ticket - $10.2</h3>
+                <p>Chance to win: $100 - 30% of prize pool</p>
+                <button class="buy-ticket" data-category="2">Buy Ticket</button>
+            </div>
+            <div class="ticket-option" data-category="3">
+                <h3>Platinum Ticket - $100.2</h3>
+                <p>Chance to win: $200 - 30% of prize pool</p>
+                <button class="buy-ticket" data-category="3">Buy Ticket</button>
+            </div>
+        </section>
+
+        <!-- Loading Indicator -->
+        <div id="loading" style="display: none;">Loading...</div>
+
+        <!-- Event Alerts Section -->
+        <section id="alerts">
+            <h2>Event Alerts</h2>
+            <ul id="alert-list"></ul> <!-- List to display event messages -->
+        </section>
+
+        <section id="error-message">
+            <p id="error-text">No errors.</p>
+        </section>
+
+        <input type="text" id="referral-input" placeholder="Enter referrer address (optional)">
+        
+        <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
